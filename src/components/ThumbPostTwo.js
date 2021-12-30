@@ -27,7 +27,7 @@ const imageStyle = {
     width: '100%',
     height: postHeight-postHeight/4,
     objectFit: 'cover',
-    //Test
+    //Test2
 }
 
 export default ThumbPostTwo
