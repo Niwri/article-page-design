@@ -25,10 +25,11 @@ const ThumbPostTwo = ( { title, date, text, author, image } ) => {
 }
 
 const thumbPostStyle = {
+    position: 'relative',
     width: postWidth,
     height: postHeight,
     backgroundColor: darkPurple,
-    zIndex: -1
+    zIndex: 0
 }
 
 const purpleBackground = {
@@ -36,7 +37,7 @@ const purpleBackground = {
     width: '100%',
     height: postHeight-postHeight/4,
     backgroundColor: lightPurple,
-    zIndex: 0,
+    zIndex: 1,
     top: -fontSize-20
 }
 
@@ -47,7 +48,7 @@ const imageStyle = {
     objectFit: 'cover',
     borderRadius: '0 50px 0 0',
     top: 2*(-postHeight+postHeight/4)-fontSize-50,
-    zIndex: 3
+    zIndex: 4
 }
 
 const postTitleStyle = {
@@ -55,7 +56,7 @@ const postTitleStyle = {
     width: '100%',
     height: postHeight/4+50,
     backgroundColor: darkPurple,
-    zIndex: 1,
+    zIndex: 2,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

@@ -1,6 +1,7 @@
 :root {
     --postTransitionTime: 1.5s;
     --postTransitionFunc: ease-in-out;
+    --postWidth: -250px;
 }
 
 .postTitle {
@@ -16,10 +17,10 @@
 }
 
 .thumbPost:hover .postTitle {
-    right: -250px; /*Post Width*/
+    right: var(--postWidth); /*Post Width*/
 }
 
 .thumbPost:hover .postText {
-    right: -250px;/*Post Width*/
+    right: var(--postWidth);/*Post Width*/
     
 }

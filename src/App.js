@@ -2,6 +2,7 @@ import SearchButton from './components/SearchButton.js'
 import SearchTextField from './components/SearchTextField.js'
 import ThumbPost from './components/ThumbPost.js'
 import ThumbPostTwo from './components/ThumbPostTwo.js'
+import ThumbPostThree from './components/ThumbPostThree.js'
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
 import './index.css';
@@ -54,16 +55,26 @@ function App() {
     </>
     ,
     <>
-      <ThumbPostTwo
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-    
+    <ThumbPostTwo
+      title="The Brain is a Tumor!" 
+      date="01/23/2025" 
+      text="TestText" 
+      author="Guy D"
+      image={brain}
+    />
+    <br/>
+  </>
+  ,
+  <>
+    <ThumbPostThree
+      title="The Brain is a Tumor!" 
+      date="01/23/2025" 
+      text="TestText" 
+      author="Guy D"
+      image={brain}
+    />
+    <br/>
+  </>
   ];
 
   return (

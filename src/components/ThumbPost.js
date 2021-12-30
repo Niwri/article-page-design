@@ -27,6 +27,7 @@ const ThumbPost = ( { title, date, text, author, image }) => {
 }
 
 const thumbPostStyle = {
+    position: 'relative',
     width: postWidth,
     height: postHeight,
     backgroundColor: darkPurple,
