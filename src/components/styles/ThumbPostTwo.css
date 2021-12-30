@@ -1,0 +1,25 @@
+:root {
+    --postTransitionTime: 1.5s;
+    --postTransitionFunc: ease-in-out;
+}
+
+.postTitle { 
+    right: 0px;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+.postText { 
+    right: 0px;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+
+.thumbPost:hover .postTitle {
+    right: -250px;
+}
+
+.thumbPost:hover .postText {
+    right: -250px;
+}

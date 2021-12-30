@@ -1,21 +1,23 @@
-import './styles/ThumbPostOne.css'
+
 
 const postWidth = 250, postHeight = postWidth*4/3;
-const fontSize = 30;
+const fontSize = 15;
 const darkPurple = '#9142ff';
 const lightPurple = '#BB8CFF';
 
 const ThumbPost = ( { title, date, text, author, image }) => {
-    
+    require('./styles/ThumbPostOne.css');
     return (
         <div className='thumbPost' style={thumbPostStyle}>
             
             <img src={image} alt="" style={imageStyle}/>
+
             <div style={purpleBackgroundStyle}></div>
-            <div className='sharpCorner' style={sharpCorner}></div>
+
             <div className='postTitle' style={postTitleStyle}>
-                <p>{title}</p>
+                <p style={titleStyle}>{title}</p>
             </div>
+
             <div className='postText' style={postTextStyle}>
                 <p style={textStyle}>{text}</p>
             </div>
@@ -27,7 +29,8 @@ const ThumbPost = ( { title, date, text, author, image }) => {
 const thumbPostStyle = {
     width: postWidth,
     height: postHeight,
-    backgroundColor: darkPurple
+    backgroundColor: darkPurple,
+    zIndex: 0
 }
 
 const purpleBackgroundStyle = {
@@ -44,7 +47,7 @@ const imageStyle = {
     width: '100%',
     height: postHeight-postHeight/4,
     objectFit: 'cover',
-    zIndex: 2,
+    zIndex: 4,
     borderRadius: '0 0 50px 0'
 }
 
@@ -55,36 +58,33 @@ const postTitleStyle = {
     fontSize: 20,
     fontWeight: 'bold',
     color: 'white',
-    zIndex: 3,
+    zIndex: 2,
     width: '100%',
-    height: postHeight/4,
+    height: postHeight/4+50,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-}
-
-const sharpCorner = {
-    position: 'relative',
-    width: postWidth/5,
-    height: postHeight/4,
-    borderRadius: '0 0 200px 0',
-    zIndex: 3,
-    marginTop: -postHeight/4,
-    backgroundColor: 'rgb(0, 0, 0, 0)'
+    backgroundColor: darkPurple,
+    marginTop: -50,
 }
 
 const postTextStyle = {
     position: 'relative',
     width: postWidth,
-    height: postHeight,
+    height: postHeight-postHeight/4,
     top: -postHeight-fontSize,
     backgroundColor: lightPurple,
-    zIndex: -1,
+    zIndex: 3,
     fontSize: fontSize,
+    borderRadius: '0 0 50px 0'
 }
 
 const textStyle = {
     paddingLeft: 40,
+    paddingTop: 40
+}
+
+const titleStyle = {
     paddingTop: 40
 }
 

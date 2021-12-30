@@ -50,6 +50,18 @@ function App() {
         author="Guy D"
         image={brain}
       />
+      <br/>
+    </>
+    ,
+    <>
+      <ThumbPostTwo
+        title="The Brain is a Tumor!" 
+        date="01/23/2025" 
+        text="TestText" 
+        author="Guy D"
+        image={brain}
+      />
+      <br/>
     </>
     
   ];
