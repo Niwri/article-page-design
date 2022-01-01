@@ -33,17 +33,6 @@ function App() {
     </>
     ,
     <>
-      <ThumbPost 
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-      />
-      <br/>
-    </>
-    ,
-    <>
       <ThumbPostTwo
         title="The Brain is a Tumor!" 
         date="01/23/2025" 
@@ -55,26 +44,15 @@ function App() {
     </>
     ,
     <>
-    <ThumbPostTwo
-      title="The Brain is a Tumor!" 
-      date="01/23/2025" 
-      text="TestText" 
-      author="Guy D"
-      image={brain}
-    />
-    <br/>
-  </>
-  ,
-  <>
-    <ThumbPostThree
-      title="The Brain is a Tumor!" 
-      date="01/23/2025" 
-      text="TestText" 
-      author="Guy D"
-      image={brain}
-    />
-    <br/>
-  </>
+      <ThumbPostThree
+        title="The Brain is a Tumor!" 
+        date="01/23/2025" 
+        text="TestText" 
+        author="Guy D"
+        image={brain}
+      />
+      <br/>
+    </>
   ];
 
   return (
@@ -86,7 +64,10 @@ function App() {
       </div>
 
       {/* Thumb Posts */}
-      {thumbPostList}
+      <div style={tempHorizStyle}>
+        {thumbPostList}
+      </div>
+      
     </>
   );
 }
@@ -100,6 +81,12 @@ const searchContainerStyle = {
   left: 100, 
   display: 'flex',
   width: 1000
+}
+
+const tempHorizStyle = { 
+  display: 'flex',
+  flexWrap: 'nowrap',
+  
 }
 
 export default App;

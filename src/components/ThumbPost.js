@@ -6,7 +6,7 @@ const darkPurple = '#9142ff';
 const lightPurple = '#BB8CFF';
 
 const ThumbPost = ( { title, date, text, author, image }) => {
-    require('./styles/ThumbPostOne.css');
+    require('./styles/ThumbPost.css');
     return (
         <div className='thumbPost' style={thumbPostStyle}>
             
@@ -31,7 +31,8 @@ const thumbPostStyle = {
     width: postWidth,
     height: postHeight,
     backgroundColor: darkPurple,
-    zIndex: 0
+    zIndex: 0,
+    margin: 10
 }
 
 const purpleBackgroundStyle = {
