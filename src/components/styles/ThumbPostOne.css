@@ -1,0 +1,40 @@
+:root {
+    --postTransitionTime: 1.5s;
+    --postTransitionFunc: ease-in-out;
+}
+
+.thumbPost > div {
+    background-color: #9142ff;
+}
+
+.sharpCorner {
+    box-shadow: 0 45px 0 0 #9142ff;
+    right: -200px; /*Post Width x 4/5 */
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+.postTitle {
+    right: 0;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+.postText {
+    right: 0;
+    transition: var(--postTransitionTime);
+    transition-timing-function: var(--postTransitionFunc);
+}
+
+.thumbPost:hover .postTitle {
+    right: -250px; /*Post Width*/
+}
+
+.thumbPost:hover .sharpCorner {
+    right: -450px; /*Post Width + 200*/
+}
+
+.thumbPost:hover .postText {
+    right: -250px;/*Post Width*/
+    
+}
