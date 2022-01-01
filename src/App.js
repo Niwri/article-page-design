@@ -5,6 +5,7 @@ import ThumbPostTwo from './components/ThumbPostTwo.js'
 import ThumbPostThree from './components/ThumbPostThree.js'
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
+import authorImage from './components/images/authorImage.png'
 import './index.css';
 
 function App() {
@@ -42,6 +43,20 @@ function App() {
       />
       <br/>
     </>
+  ];
+
+  let thumbPostList2 = [
+    <>
+      <ThumbPostThree
+        title="The Brain is a Tumor!" 
+        date="01/23/2025" 
+        text="TestText" 
+        author="Guy D"
+        image={brain}
+        authorImage={authorImage}
+      />
+      <br/>
+    </>
     ,
     <>
       <ThumbPostThree
@@ -50,11 +65,23 @@ function App() {
         text="TestText" 
         author="Guy D"
         image={brain}
+        authorImage={authorImage}
+      />
+      <br/>
+    </>
+    ,
+    <>
+      <ThumbPostThree
+        title="The Brain is a Tumor!" 
+        date="01/23/2025" 
+        text="TestText" 
+        author="Guy D"
+        image={brain}
+        authorImage={authorImage}
       />
       <br/>
     </>
   ];
-
   return (
     <>
       {/* Search Container */}
@@ -64,8 +91,10 @@ function App() {
       </div>
 
       {/* Thumb Posts */}
+      {thumbPostList}
+
       <div style={tempHorizStyle}>
-        {thumbPostList}
+        {thumbPostList2}
       </div>
       
     </>
@@ -80,13 +109,13 @@ const searchContainerStyle = {
   top: 100,
   left: 100, 
   display: 'flex',
-  width: 1000
+  width: 1000,
+  
 }
 
 const tempHorizStyle = { 
   display: 'flex',
   flexWrap: 'nowrap',
-  
 }
 
 export default App;

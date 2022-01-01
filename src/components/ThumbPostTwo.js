@@ -28,6 +28,7 @@ const thumbPostStyle = {
     position: 'relative',
     width: postWidth,
     height: postHeight,
+    maxHeight: postHeight,
     backgroundColor: darkPurple,
     zIndex: 0,
     margin: 10
@@ -39,7 +40,7 @@ const purpleBackground = {
     height: postHeight-postHeight/4,
     backgroundColor: lightPurple,
     zIndex: 1,
-    top: -fontSize-20
+    marginTop: -fontSize-5
 }
 
 const imageStyle = {
@@ -48,7 +49,8 @@ const imageStyle = {
     height: postHeight-postHeight/4,
     objectFit: 'cover',
     borderRadius: '0 50px 0 0',
-    top: 2*(-postHeight+postHeight/4)-fontSize-50,
+    marginTop: -10000,
+    top: -15,
     zIndex: 4
 }
 
@@ -73,7 +75,7 @@ const postTextStyle = {
     borderRadius: '0 50px 0 0',
     backgroundColor: lightPurple,
     fontSize: fontSize,
-    top: -postHeight+postHeight/4-fontSize-50,
+    marginTop: -postHeight+postHeight/4-fontSize,
     zIndex: 2
 }
 
