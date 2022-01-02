@@ -40,7 +40,7 @@ const purpleBackground = {
     height: postHeight-postHeight/4,
     backgroundColor: lightPurple,
     zIndex: 1,
-    marginTop: -fontSize-5
+    marginTop: -fontSize-20
 }
 
 const imageStyle = {

@@ -2,10 +2,12 @@ import SearchButton from './components/SearchButton.js'
 import SearchTextField from './components/SearchTextField.js'
 import ThumbPost from './components/ThumbPost.js'
 import ThumbPostTwo from './components/ThumbPostTwo.js'
-import ThumbPostThree from './components/ThumbPostThree.js'
+import HorizontalContainer from './components/HorizontalContainer.js'
+
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
 import authorImage from './components/images/authorImage.png'
+
 import './index.css';
 
 function App() {
@@ -19,8 +21,101 @@ function App() {
     console.log(searchToggle);
   }
 
-  
-  //List of Thumbposts
+  //List of Posts
+  const [ posts, setPosts ] = useState([
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+    ,
+    {
+      title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science"
+    }
+
+  ])
+
+  //Something fun...
   let thumbPostList = [
     <>
       <ThumbPost 
@@ -44,44 +139,6 @@ function App() {
       <br/>
     </>
   ];
-
-  let thumbPostList2 = [
-    <>
-      <ThumbPostThree
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-        authorImage={authorImage}
-      />
-      <br/>
-    </>
-    ,
-    <>
-      <ThumbPostThree
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-        authorImage={authorImage}
-      />
-      <br/>
-    </>
-    ,
-    <>
-      <ThumbPostThree
-        title="The Brain is a Tumor!" 
-        date="01/23/2025" 
-        text="TestText" 
-        author="Guy D"
-        image={brain}
-        authorImage={authorImage}
-      />
-      <br/>
-    </>
-  ];
   return (
     <>
       {/* Search Container */}
@@ -91,11 +148,9 @@ function App() {
       </div>
 
       {/* Thumb Posts */}
-      {thumbPostList}
+      {/*thumbPostList*/}
 
-      <div style={tempHorizStyle}>
-        {thumbPostList2}
-      </div>
+      <HorizontalContainer posts={posts} category={"Health & Science"}/>
       
     </>
   );
@@ -106,16 +161,13 @@ const searchContainerStyle = {
   margin: 'auto', 
   position: 'relative', 
   textAlign: 'center', 
-  top: 100,
-  left: 100, 
+  marginTop: 100,
+  marginLeft: 100, 
+  paddingBottom: 100,
   display: 'flex',
   width: 1000,
   
 }
 
-const tempHorizStyle = { 
-  display: 'flex',
-  flexWrap: 'nowrap',
-}
 
 export default App;

@@ -10,6 +10,7 @@ const SearchButton = ( { isToggle, onToggle } ) => {
 
 //CSS Style for Search Button
 const searchButtonStyle = {
+    position: 'relative',
     borderRadius: 100,
     padding: 2,
     backgroundColor: "#F1F1F1",
