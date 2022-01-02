@@ -2,9 +2,10 @@ import ThumbPost from './ThumbPostThree.js'
 
 const HorizontalContainer = ( { posts, category }) => {
         
-        const ele = document.getElementsByClassName('postContainer');
-        ele.scrollTop = 0;
-        ele.scrollLeft = 0;
+        const postContainer = document.querySelector('.postContainer');
+
+        postContainer.scrollTop = 0;
+        postContainer.scrollLeft = 0;
         
         let pos = {
             top: 0,
@@ -14,34 +15,34 @@ const HorizontalContainer = ( { posts, category }) => {
         }
 
         const mouseDownHandler = (e) => {
-            if(e.target.className === 'postContainer') {
-                e.target.style.cursor = 'grabbing';
-                e.target.style.userSelect = 'none';
+            postContainer.style.cursor = 'grabbing';
+            postContainer.style.userSelect = 'none';
 
-                pos = {
-                    left: e.target.scrollLeft,
-                    top: e.target.scrollTop,
-                    x: e.clientX,
-                    y: e.clientY
-                };
+            pos = {
+                left: postContainer.scrollLeft,
+                top: postContainer.scrollTop,
+                x: e.clientX,
+                y: e.clientY
+            };
 
-                document.addEventListener('mousemove', mouseMoveHandler);
-                document.addEventListener('mouseup', mouseUpHandler);
-            }
+            document.addEventListener('mousemove', mouseMoveHandler);
+            document.addEventListener('mouseup', mouseUpHandler);
+            
         }
 
         const mouseMoveHandler = (e) => {
             const dx = e.clientX - pos.x;
             const dy = e.clientY - pos.y;
 
-            e.target.scrollTop = pos.top - dy;
-            e.target.scrollLeft = pos.left - dx;
+            postContainer.scrollTop = pos.top - dy;
+            postContainer.scrollLeft = pos.left - dx;
 
         }
 
         const mouseUpHandler = (e) => {
-            e.target.style.cursor = 'grab';
-            e.target.style.removeProperty('user-select');
+            postContainer.style.cursor = 'grab';
+            postContainer.style.removeProperty('user-select');
+
             document.removeEventListener('mousemove', mouseMoveHandler);
             document.removeEventListener('mouseup', mouseUpHandler);
         }

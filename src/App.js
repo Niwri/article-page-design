@@ -151,7 +151,7 @@ function App() {
       {/*thumbPostList*/}
 
       <HorizontalContainer posts={posts} category={"Health & Science"}/>
-      
+      <HorizontalContainer posts={posts} category={"urdad lmao"}/>
     </>
   );
 }

@@ -34,6 +34,7 @@ const imageStyle = {
     position: 'relative',
     width: postWidth,
     height: postHeight*3/4,
+    boxShadow: '0px 0px 10px 0px'
 }
 
 const postContainerStyle = {
