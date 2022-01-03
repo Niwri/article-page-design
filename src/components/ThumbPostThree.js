@@ -6,7 +6,7 @@ const fontSize = 15;
 
 
 const ThumbPostThree = ( { title, date,author, image, link, authorImage, category } ) => {
-
+    
     return (
         
             <div style={postContainerStyle}>

@@ -1,8 +1,9 @@
-import SearchButton from './components/SearchButton.js'
-import SearchTextField from './components/SearchTextField.js'
+
+import SearchContainer from './components/SearchContainer.js'
 import ThumbPost from './components/ThumbPost.js'
 import ThumbPostTwo from './components/ThumbPostTwo.js'
 import HorizontalContainer from './components/HorizontalContainer.js'
+import Header from './components/Header.js'
 
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
@@ -20,6 +21,9 @@ function App() {
     setSearchToggle(!searchToggle);
     console.log(searchToggle);
   }
+
+  
+
 
   //List of Posts
   const [ posts, setPosts ] = useState([
@@ -141,33 +145,27 @@ function App() {
   ];
   return (
     <>
+      {/* Header */}
+      <Header/>
+
+      {/* Featured & Recent Container */}
+
       {/* Search Container */}
-      <div style={searchContainerStyle}>
-        <SearchButton isToggle={searchToggle} onToggle={toggleSearch}/>
-        {searchToggle ? <SearchTextField/> : <></>}
-      </div>
+      <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
 
-      {/* Thumb Posts */}
-      {/*thumbPostList*/}
-
+      {/* Thumb Posts */} 
       <HorizontalContainer posts={posts} category={"Health & Science"}/>
       <HorizontalContainer posts={posts} category={"urdad lmao"}/>
+
+
+      {/* Some extra stuff I made */}
+      <div style={{marginTop: 500}}></div>
+      {thumbPostList}
     </>
   );
 }
 
-//Style for Search Container
-const searchContainerStyle = {
-  margin: 'auto', 
-  position: 'relative', 
-  textAlign: 'center', 
-  marginTop: 100,
-  marginLeft: 100, 
-  paddingBottom: 100,
-  display: 'flex',
-  width: 1000,
-  
-}
+
 
 
 export default App;

@@ -1,80 +1,67 @@
 import ThumbPost from './ThumbPostThree.js'
+import './styles/ThumbPostThree.css'
+
 
 const HorizontalContainer = ( { posts, category }) => {
+    
+    require('./styles/ThumbPostThree.css')
+    //Draggable Function, too buggy atm
+    /* const postContainer = document.querySelector('.postContainer');
+
+      
+    let isDown;
+    let scrollLeft;
+    let startX;
+  
+    postContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        postContainer.style.cursor = 'grabbing';
         
-        const postContainer = document.querySelector('.postContainer');
+        startX = e.pageX - postContainer.offsetLeft;
+        scrollLeft = postContainer.scrollLeft;
+    })
+  
+    postContainer.addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - postContainer.offsetLeft;
+        postContainer.scrollLeft = scrollLeft - x + startX;
+    })
+  
+    postContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        postContainer.style.cursor = 'grab';
+    })  */
 
-        postContainer.scrollTop = 0;
-        postContainer.scrollLeft = 0;
+    return (
         
-        let pos = {
-            top: 0,
-            left: 0,
-            x: 0,
-            y: 0
-        }
-
-        const mouseDownHandler = (e) => {
-            postContainer.style.cursor = 'grabbing';
-            postContainer.style.userSelect = 'none';
-
-            pos = {
-                left: postContainer.scrollLeft,
-                top: postContainer.scrollTop,
-                x: e.clientX,
-                y: e.clientY
-            };
-
-            document.addEventListener('mousemove', mouseMoveHandler);
-            document.addEventListener('mouseup', mouseUpHandler);
+        <div style={containerStyle}>
             
-        }
-
-        const mouseMoveHandler = (e) => {
-            const dx = e.clientX - pos.x;
-            const dy = e.clientY - pos.y;
-
-            postContainer.scrollTop = pos.top - dy;
-            postContainer.scrollLeft = pos.left - dx;
-
-        }
-
-        const mouseUpHandler = (e) => {
-            postContainer.style.cursor = 'grab';
-            postContainer.style.removeProperty('user-select');
-
-            document.removeEventListener('mousemove', mouseMoveHandler);
-            document.removeEventListener('mouseup', mouseUpHandler);
-        }
-        
-        document.addEventListener('mousedown', mouseDownHandler);
-
-        
-        return (
-            <div style={containerStyle}>
-
-                <div style={categoryStyle}>
-                    {category}
-                </div>
-                
-                <div style={horizStyle}>
-                    <div className="postContainer" style={postContainerStyle}>
-                        {posts.map((post) => {
-                            return <ThumbPost 
-                                    title={post.title} 
-                                    date={post.date} 
-                                    author={post.author} 
-                                    image={post.image} 
-                                    authorImage={post.authorImage}
-                                    category={post.category}
-                                    />
-                        })}
-                    </div>
-                </div>
-
+            <div style={categoryStyle}>
+                {category}
             </div>
-        )
+            
+            <div style={horizStyle}>
+                <div className="postContainer" style={postContainerStyle}>
+                    {posts.map((post) => {
+                        return <ThumbPost 
+                                title={post.title} 
+                                date={post.date} 
+                                author={post.author} 
+                                image={post.image} 
+                                authorImage={post.authorImage}
+                                category={post.category}
+                                />
+                    })}
+                </div>
+            </div>
+            
+        </div>
+    )
+
+    
 }
+
 
 const containerStyle = {
     marginLeft: '10%',
