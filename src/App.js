@@ -3,6 +3,7 @@ import SearchContainer from './components/SearchContainer.js'
 import ThumbPost from './components/ThumbPost.js'
 import ThumbPostTwo from './components/ThumbPostTwo.js'
 import HorizontalContainer from './components/HorizontalContainer.js'
+import FeaturedContainer from './components/FeaturedContainer.js'
 import Header from './components/Header.js'
 
 import { useState } from 'react'
@@ -33,7 +34,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -42,7 +44,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -51,7 +54,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -60,7 +64,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -69,7 +74,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -78,7 +84,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -87,7 +94,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -96,7 +104,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -105,7 +114,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
     ,
     {
@@ -114,7 +124,8 @@ function App() {
       author: "Guy D",
       image: brain,
       authorImage: authorImage,
-      category: "Health & Science"
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI"
     }
 
   ])
@@ -149,6 +160,7 @@ function App() {
       <Header/>
 
       {/* Featured & Recent Container */}
+      <FeaturedContainer featuredPosts={posts}/>
 
       {/* Search Container */}
       <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>

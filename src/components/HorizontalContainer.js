@@ -31,7 +31,7 @@ const HorizontalContainer = ( { posts, category }) => {
     postContainer.addEventListener('mouseup', () => {
         isDown = false;
         postContainer.style.cursor = 'grab';
-    })  */
+    }) */
 
     return (
         
@@ -45,12 +45,7 @@ const HorizontalContainer = ( { posts, category }) => {
                 <div className="postContainer" style={postContainerStyle}>
                     {posts.map((post) => {
                         return <ThumbPost 
-                                title={post.title} 
-                                date={post.date} 
-                                author={post.author} 
-                                image={post.image} 
-                                authorImage={post.authorImage}
-                                category={post.category}
+                                post={post}
                                 />
                     })}
                 </div>
@@ -85,7 +80,7 @@ const categoryStyle = {
     zIndex: 1,
     backgroundColor: 'white',
     width: 'fit-content',
-    left: 75,
+    left: '5%',
     padding: '0px 10px 0px 10px',
     color: '#7960AE',
 }

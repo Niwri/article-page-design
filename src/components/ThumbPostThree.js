@@ -5,25 +5,25 @@ const fontSize = 15;
 
 
 
-const ThumbPostThree = ( { title, date,author, image, link, authorImage, category } ) => {
+const ThumbPostThree = ( { post } ) => {
     
     return (
         
             <div style={postContainerStyle}>
-                <a className='linkBox' href="https://www.youtube.com/watch?v=jvGnekdMOhI" style={linkStyle}>
+                <a className='linkBox' href={post.link} style={linkStyle}>
                     <div>
-                        <img style={imageStyle} src={image} alt=""/>
+                        <img style={imageStyle} src={post.image} alt=""/>
                         <div>
-                            <p style={titleStyle}>{title}</p>
+                            <p style={titleStyle}>{post.title}</p>
                         </div>
                     </div>
                 </a>
                 <div style={authorContainerStyle}>
-                    <p style={authorStyle}>{author}</p>
-                    <p style={dateStyle}>{date}</p>
-                    <div style={authorImageContainerStyle}><img style={authorImageStyle} src={authorImage} alt=""/></div>
+                    <p style={authorStyle}>{post.author}</p>
+                    <p style={dateStyle}>{post.date}</p>
+                    <div style={authorImageContainerStyle}><img style={authorImageStyle} src={post.authorImage} alt=""/></div>
                     
-                    <p style={categoryStyle}>• {category}</p>
+                    <p style={categoryStyle}>• {post.category}</p>
                 </div>
             </div>
         

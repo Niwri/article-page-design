@@ -8,8 +8,11 @@
     right: 0;
     transition: var(--postTransitionTime);
     transition-timing-function: var(--postTransitionFunc);
+    
 }
-
+.dummy {
+    color: red
+}
 .postText {
     right: 0;
     transition: var(--postTransitionTime);
