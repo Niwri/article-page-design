@@ -36,21 +36,21 @@ postLinkStyle = {
 },
 
 imageStyle = {
-    width: '50%',   
-    height: 605,
+    width: '60%',   
+    height: 685,
     objectFit: 'cover',
     borderRadius: '40px 0px 0px 40px',
     margin: 'auto'
 },
 
 textContainerStyle = {
-    width: '280%',
-    height: 600,
+    width: '300%',
+    height: 680,
     backgroundColor: '#5D33B5',
     borderRadius: '0 40px 40px 0',
     paddingTop: 5,
     paddingLeft: '3%',
-    paddingRight: '8em'
+    paddingRight: '9em'
 },
 
 titleStyle = {

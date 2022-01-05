@@ -15,11 +15,9 @@ const searchContainerStyle = {
     margin: 'auto', 
     position: 'relative', 
     textAlign: 'center', 
-    marginTop: 100,
     marginLeft: 100, 
-    paddingBottom: 100,
     display: 'flex',
-    width: 1000,
+    width: 'fit-content',
 }
 
 export default SearchContainer

@@ -16,8 +16,8 @@ const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => 
 }
 
 const containerStyle = {
-    marginLeft: '10%',
-    width: '55%',
+    marginLeft: '5%',
+    width: '120%',
     maxWidth: 1500,
 },
 

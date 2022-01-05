@@ -1,9 +1,7 @@
-import ThumbPost from './ThumbPostThree.js'
+import ThumbPost from './ThumbPostFour.js'
 
 
 const VerticalContainer = ( { recentPosts, category }) => {
-    
-  require('./styles/ThumbPostThree.css')
 
     return (
         
@@ -14,13 +12,12 @@ const VerticalContainer = ( { recentPosts, category }) => {
         </div>
             
         <div style={vertiStyle}>
-            <div className="postContainer" style={postContainerStyle}>
-                {recentPosts.map((recentPost) => {
+            <div style={postContainerStyle}>
+                {recentPosts.slice(recentPosts.length-3).map((recentPost) => {
                     return <ThumbPost post={recentPost}/>
                 })}
             </div> 
         </div>  
-
       </div>
   )
 
@@ -29,20 +26,17 @@ const VerticalContainer = ( { recentPosts, category }) => {
 
 
 const containerStyle = {
-    marginLeft: '10%',
-    marginBottom: '5%'
+    position: 'relative',
+    marginLeft: '5%',
+    marginBottom: '5%',
+    marginRight: '-10%',
+    width: '100%'
 },
 
 postContainerStyle = {
     display: 'flex',
-    //flexWrap: 'nowrap',
-    //gridColumnGap: 20,
-    //overflowX: 'auto',
     flexDirection: 'column',
     rowGap: '30px'
-    //paddingBottom: 10,
-    //cursor: 'grab',
-    //zIndex: 3
 },
 
 categoryStyle = {
@@ -63,9 +57,8 @@ vertiStyle = {
     borderStyle: 'solid',
     borderWidth: 10,
     borderRadius: 40,
-    borderColor: '#9E81DD',
-    width: '25%',
-    //zIndex: 0,
+    borderColor: '#7D5DC3',
+    width: 'fit-content',
     padding: '40px 20px 30px 20px',
   display: 'flex',
   flexDirection: 'column'

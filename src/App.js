@@ -6,6 +6,7 @@ import HorizontalContainer from './components/HorizontalContainer.js'
 import FeaturedContainer from './components/FeaturedContainer.js'
 import Header from './components/Header.js'
 import VerticalContainer from './components/VerticalContainer.js'
+import CategorySelector from './components/CategorySelector.js'
 
 import { useState } from 'react'
 import brain from './components/images/brainImage.jpg'
@@ -246,24 +247,45 @@ function App() {
       <br/>
     </>
   ];
+
+  let categories = [
+    <>
+      <HorizontalContainer posts={posts} category={"Tutorials"}/>
+      <HorizontalContainer posts={posts} category={"Projects"}/>
+    </>
+    ,
+    <HorizontalContainer posts={posts} category={"Tutorials"}/>
+    ,
+    <HorizontalContainer posts={posts} category={"Projects"}/>
+  ]
+
+  const [ categorySelected, selectCategory ] = useState(0);
   
   return (
     <>
       {/* Header */}
       <Header/>
 
-      {/* Featured & Recent Container */}
-      <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
+      <div style={topContainerStyle}>
+        {/* Featured & Recent Container */}
+        <FeaturedContainer featuredPosts={featuredPosts} featuredNum={featuredNum} nextFeaturedNum={nextFeaturedNum}/>
 
-      {/* Search Container */}
-      <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
+        {/* Recent Posts */} 
+        <VerticalContainer recentPosts={recentPosts} category={"Recent Posts"}/>
+      </div>
+
+      <div style={middleContainerStyle}>
+        {/* Search Container */}
+        <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>
+
+        {/* Category Selector Container */}
+        <CategorySelector categories={categories} categorySelected={categorySelected} selectCategory={selectCategory}/>
+      </div>
+
+      
 
       {/* Thumb Posts */} 
-      <HorizontalContainer posts={posts} category={"Health & Science"}/>
-      <HorizontalContainer posts={posts} category={"urdad lmao"}/>
-
-      {/* Recent Posts */} 
-      <VerticalContainer recentPosts={recentPosts} category={"Recent Posts"}/>
+      {categories[categorySelected]}
 
       {/* Some extra stuff I made */}
       <div style={{marginTop: 500}}></div>
@@ -272,6 +294,20 @@ function App() {
   );
 }
 
+const topContainerStyle = {
+  display: 'flex',
+  justifyContent: 'space-around',
+  position: 'relative',
+  margin: 'auto',
+  textAlign: 'center',
+  gap: 10
+},
+
+middleContainerStyle = {
+  display: 'flex',
+  width: 'fit-content',
+  gap: '10%'
+}
 
 
 

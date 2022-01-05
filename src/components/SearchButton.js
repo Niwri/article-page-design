@@ -18,7 +18,9 @@ const searchButtonStyle = {
     borderWidth: 2,
     width: 50,
     height: 50,
-    zIndex: 1
+    zIndex: 1,
+    border: 'none',
+    boxShadow: '2px 2px 0 0 rgb(0, 0, 0, 0.5)'
 },
 
 //CSS Style for Search Icon
