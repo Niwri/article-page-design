@@ -1,10 +1,25 @@
 const FeaturedPost = ( { post }) => {
+    const hoverOver = (e) => {
+      e.target.style.color = 'rgb(255, 255, 255, 0.8)';
+      e.target.style.backgroundColor = 'rgb(255, 255, 255, 0.7)';
+      e.target.style.borderColor = 'rgb(255, 255, 255, 0.3)';
+    }
+
+    const hoverOut = (e) => {
+      e.target.style.color = 'rgb(255, 255, 255, 0.5)'
+      e.target.style.backgroundColor = 'rgb(255, 255, 255, 0.5)';
+      e.target.style.borderColor = 'rgb(255, 255, 255, 0.5)';
+    }
+    
     return (
         <div style={containerStyle}>
             <img style={imageStyle} src={post.image} alt=""/>
             <div style={textContainerStyle}>
                 <p style={titleStyle}>{post.title}</p>
                 <p style={textStyle}>{post.text}</p>
+                <form action={post.link} target="_blank" rel="noreferrer">
+                  <input type="submit" style={buttonStyle} value="Read More" onMouseOver={hoverOver} onMouseOut={hoverOut}/>
+                </form>
             </div>
         </div>
     )
@@ -13,6 +28,7 @@ const FeaturedPost = ( { post }) => {
 const containerStyle = {
     position: 'relative',
     display: 'flex',
+    transition: '2s'
 },
 
 postLinkStyle = {
@@ -49,7 +65,28 @@ titleStyle = {
 textStyle = {
     fontSize: 20,
     color: 'rgb(255, 255, 255, 0.8)',
-    
+    display: '-webkit-box',
+    WebkitLineClamp: 14,
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden'
+},
+
+buttonStyle = {
+  float: 'center',
+  fontSize: 30,
+  marginLeft: '20%',
+  cursor: 'pointer',
+  marginTop: '10%',
+  backgroundColor: 'rgb(255, 255, 255, 0.5)',
+  borderColor: 'rgb(255, 255, 255, 0.5)',
+  borderRadius: 20,
+  border: 'none',
+  padding: 10,
+  fontFamily: "Comic Sans MS",
+  fontWeight: 'bold',
+  color: 'rgb(255, 255, 255, 0.5)',
+  boxShadow: '5px 5px 0px 0px rgb(0, 0, 0, 0.5)'
+
 
 }
 

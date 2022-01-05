@@ -1,14 +1,14 @@
 import FeaturedPost from './FeaturedPost.js'
 
-const FeaturedContainer = ( { featuredPosts }) => {
+const FeaturedContainer = ( { featuredPosts, featuredNum, nextFeaturedNum }) => {
 
     return (
         <div style={containerStyle}>
-            <div style={categoryStyle}>Featured Section</div>
+            <div style={categoryStyle}>Featured Posts</div>
             <div style={featuredContainerStyle}>
-                <FeaturedPost post={featuredPosts[0]}/>
-                <button style={leftButtonStyle}>&#60;</button>
-                <button style={rightButtonStyle}>&#62;</button>
+                <FeaturedPost post={featuredPosts[featuredNum]}/>
+                <button style={leftButtonStyle} onClick={() => nextFeaturedNum(false)}>&#60;</button>
+                <button style={rightButtonStyle} onClick={() => nextFeaturedNum(true)}>&#62;</button>
             </div>
             
         </div>
@@ -28,7 +28,7 @@ categoryStyle = {
     fontWeight: 'bold',
     top: 35/2+5,
     zIndex: 1,
-    backgroundColor: 'white',
+    backgroundColor: window.getComputedStyle(document.body).backgroundColor,
     width: 'fit-content',
     padding: '0px 10px 0px 10px',
     color: '#7960AE',

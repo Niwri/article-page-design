@@ -3,10 +3,9 @@ import './styles/ThumbPostThree.css'
 
 
 const HorizontalContainer = ( { posts, category }) => {
-    
     require('./styles/ThumbPostThree.css')
     //Draggable Function, too buggy atm
-    /* const postContainer = document.querySelector('.postContainer');
+    /*const postContainer = document.querySelector('.postContainer');
 
       
     let isDown;
@@ -31,7 +30,7 @@ const HorizontalContainer = ( { posts, category }) => {
     postContainer.addEventListener('mouseup', () => {
         isDown = false;
         postContainer.style.cursor = 'grab';
-    }) */
+    })*/
 
     return (
         
@@ -58,6 +57,8 @@ const HorizontalContainer = ( { posts, category }) => {
 }
 
 
+
+
 const containerStyle = {
     marginLeft: '10%',
     marginBottom: '5%'
@@ -79,7 +80,7 @@ categoryStyle = {
     fontWeight: 'bold',
     top: 35/2+5,
     zIndex: 1,
-    backgroundColor: 'white',
+    backgroundColor: window.getComputedStyle(document.body).backgroundColor,
     width: 'fit-content',
     left: '5%',
     padding: '0px 10px 0px 10px',

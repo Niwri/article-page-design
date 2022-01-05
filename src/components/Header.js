@@ -23,6 +23,8 @@ pageTitleStyle = {
     marginBottom: 0,
     paddingBottom: 10,
     width: '50%',
+    textShadow: '4px 4px 0px #C2ADD3',
+    fontFamily: 'Comic Sans MS'
 },
 
 descStyle = {
