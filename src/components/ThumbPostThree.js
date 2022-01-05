@@ -10,7 +10,7 @@ const ThumbPostThree = ( { post } ) => {
     return (
         
             <div style={postContainerStyle}>
-                <a className='linkBox' href={post.link} style={linkStyle}>
+                <a className='linkBox' href={post.link} style={linkStyle} target="_blank" rel="noreferrer"> 
                     <div>
                         <img style={imageStyle} src={post.image} alt=""/>
                         <div>

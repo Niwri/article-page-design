@@ -19,10 +19,10 @@ const searchButtonStyle = {
     width: 50,
     height: 50,
     zIndex: 1
-}
+},
 
 //CSS Style for Search Icon
-const searchIconStyle = {
+searchIconStyle = {
     width: 30,
     height: 30,
     margin: 5

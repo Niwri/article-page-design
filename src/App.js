@@ -130,6 +130,17 @@ function App() {
 
   ])
 
+  const featuredPosts = [{
+    title: "The Brain is a Tumor!",
+      date: "01/23/2025",
+      author: "Guy D",
+      image: brain,
+      authorImage: authorImage,
+      category: "Health & Science",
+      link: "https://www.youtube.com/watch?v=jvGnekdMOhI",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis. Purus non enim praesent elementum facilisis leo vel. Libero enim sed faucibus turpis. Aenean vel elit scelerisque mauris. Volutpat sed cras ornare arcu dui vivamus. Vitae ultricies leo integer malesuada nunc. Gravida in fermentum et sollicitudin ac orci phasellus. Porttitor eget dolor morbi non arcu risus. Nunc non blandit massa enim nec dui nunc mattis. Turpis egestas integer eget aliquet nibh. Urna nec tincidunt praesent semper feugiat. Sed adipiscing diam donec adipiscing. Viverra tellus in hac habitasse platea dictumst."
+  }]
+
   //Something fun...
   let thumbPostList = [
     <>
@@ -160,7 +171,7 @@ function App() {
       <Header/>
 
       {/* Featured & Recent Container */}
-      <FeaturedContainer featuredPosts={posts}/>
+      <FeaturedContainer featuredPosts={featuredPosts}/>
 
       {/* Search Container */}
       <SearchContainer searchToggle={searchToggle} toggleSearch={toggleSearch}/>

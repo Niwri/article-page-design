@@ -60,9 +60,10 @@ const HorizontalContainer = ( { posts, category }) => {
 
 const containerStyle = {
     marginLeft: '10%',
-}
+    marginBottom: '5%'
+},
 
-const postContainerStyle = {
+postContainerStyle = {
     display: 'flex',
     flexWrap: 'nowrap',
     gridColumnGap: 20,
@@ -70,9 +71,9 @@ const postContainerStyle = {
     paddingBottom: 10,
     cursor: 'grab',
     zIndex: 3
-}
+},
 
-const categoryStyle = {
+categoryStyle = {
     position: 'relative',
     fontSize: 35,
     fontWeight: 'bold',
@@ -83,9 +84,9 @@ const categoryStyle = {
     left: '5%',
     padding: '0px 10px 0px 10px',
     color: '#7960AE',
-}
+},
 
-const horizStyle = {
+horizStyle = {
     position: 'relative',
     borderStyle: 'solid',
     borderWidth: 10,
